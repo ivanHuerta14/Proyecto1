@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Registros</title>
+    <!-- Incluir CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Incluir jQuery y jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+</head>
+<body onload="loadTableData();">
+    <h1>Desarrollo para Front end</h1>
+    <h2>Integradora 3. Animaciones y efectos</h2>
+    <h2>Maestro: MENDOZA ALVAREZ, CARLOS ALEJANDRO</h2>
+    <h2>Alumno: Christian Ivan Huerta Martínez</h2>
+    <h1>Tabla de Registros</h1>
+
+   
+    <input type="text" id="searchInput" placeholder="Buscar registros..." oninput="loadTableData()">
+    <button onclick="addRecord()">Agregar Registro</button>
+
+    <!-- Tabla -->
+    <div class="container">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable('nombre')">Nombre</th>
+                    <th onclick="sortTable('valor')">Valor</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+   
+    <div class="pagination">
+        <a href="#" onclick="prevPage()">Anterior</a>
+        <a href="#" onclick="nextPage()">Siguiente</a>
+    </div>
+
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
+
